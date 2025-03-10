@@ -1,17 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import Card from './components/Card'
 function App() {
-  const [count, setCount] = useState(0)
-
+  
+  let authorIds = [2,3,5]
   return (
-    <>
-      <h1 className='text-3xl bg-amber-200 text-red-400'>
+    <div className='flex flex-col gap-3 font-serif '>
+      <h1 className='mb-auto text-3xl font-mono p-3 rounded-md text-yellow-400'>
         Hello, Tailwind Demo
       </h1>
-    </>
+      <Card author="sachin" idList = {authorIds} />
+      <Card author="Ramesh" idList = {authorIds} />
+      <Card idList = {authorIds} />
+
+    </div >
   )
 }
 
