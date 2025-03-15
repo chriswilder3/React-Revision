@@ -22,7 +22,7 @@ function InputBox({label, amount, onAmountChange, onCurrencyChange,
               value={selectedCurreny} disabled={currencyDisabled}
           >
             { currenyOptions.map( cur => 
-              <option value={cur}> 
+              <option key={cur} value={cur}> 
                 {cur} 
               </option> )}
           </select>
