@@ -20,7 +20,7 @@ function App() {
       <button className='duration-100 delay-75 transition-colors bg-orange-400 text-slate-700 hover:bg-rose-400 px-3'>
         Swap
       </button>
-      <InputBox currency = {destCurrency} amount={amount}/>
+      <InputBox label="from" selectedCurreny = "usd" amount={100} amountDisabled='false' />
 
     </>
   )
