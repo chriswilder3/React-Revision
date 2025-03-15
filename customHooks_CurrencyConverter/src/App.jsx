@@ -37,16 +37,26 @@ function App() {
           e.preventDefault()
           convert()
       }} className='flex flex-col justify-center gap-3 items-center'>
-          <InputBox currency = {sourceCurrency} amount={amount}/>
+    
+          <InputBox label="from" selectedCurreny = {sourceCurrency} 
+                amount={amount} currencyOptions={currencyOptions} 
+                onCurrencyChange={(currency) => setSourceCurrency(currency) }
+                onAmountChange={(amount) => setAmount(amount) }
+
+                amountDisabled={false} />
           
-          <button className='mx-auto duration-100 delay-75 transition-colors bg-orange-400 text-slate-700 hover:bg-rose-400 px-3'>
+          <button onClick={swap} className='mx-auto duration-100 delay-75 transition-colors bg-orange-400 text-slate-700 hover:bg-rose-400 px-3'>
             Swap
           </button>
 
-          <InputBox label="from" selectedCurreny = "usd" amount={100} amountDisabled='false' />
+          <InputBox label="to" selectedCurreny = {destCurrency} 
+                amount={convertedAmount} currencyOptions={currencyOptions} 
+                onCurrencyChange={(currency) => setDestCurrency(currency) }
+                
+                amountDisabled={true} />
           
-          <button type="submit"> 
-              Submit 
+          <button className='bg-blue-500 ' type="submit"> 
+              Convert {sourceCurrency} to {destCurrency}
           </button>
       </form>
       

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function useCurrencyInfo(currency) {
     const [currencyData, setCurrencyData] = useState({})
     useEffect( () =>{
-        let url = 'https://latest.currency-api.pages.dev/v1/currencies/${currency}.json'
+        let url = `https://latest.currency-api.pages.dev/v1/currencies/${currency}.json`
         fetch(url)
         .then( (resp) => {
             return resp.json()
