@@ -5,11 +5,15 @@ import './index.css'
 import App from './App.jsx'
 import Layout from './Layout';
 import Home from './components/home/Home';
+import About from './components/about/About'
+import Contact from './components/contact/Contact'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
      < Route path='/' element={ <Layout />}>
         <Route path='' element={ <Home/>} />
+        <Route path='about' element={ <About />} />
+        <Route path='contact' element={<Contact />} />
      </Route>
   )
 )
