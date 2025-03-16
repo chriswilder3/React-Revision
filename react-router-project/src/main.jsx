@@ -7,6 +7,7 @@ import Layout from './Layout';
 import Home from './components/home/Home';
 import About from './components/about/About'
 import Contact from './components/contact/Contact'
+import User from './components/user/User'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
         <Route path='' element={ <Home/>} />
         <Route path='about' element={ <About />} />
         <Route path='contact' element={<Contact />} />
+        <Route path='user/:id' element={<User /> } />
      </Route>
   )
 )

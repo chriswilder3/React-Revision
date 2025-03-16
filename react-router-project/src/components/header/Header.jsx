@@ -47,6 +47,14 @@ function Header() {
                                     Contact
                                </NavLink>
                             </li>
+                            <li>
+                               < NavLink to='/user' 
+                                    className={({isActive}) => 
+                                    `block py-2 pr-4 pl-3 ${isActive?"text-red-400":"text-gray-500" } duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                                    }>
+                                    Profile
+                               </NavLink>
+                            </li>
                             
                         </ul>
                     </div>
